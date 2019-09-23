@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://qy316:qy316@mealplanner-nhfxt.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
+}

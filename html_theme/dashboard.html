@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Dashboard | Meal Planner</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="index.html"><i class="fas fa-pepper-hot"></i> MealPlanner</a>
+      </h1>
+      <ul>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li>
+          <a href="dashboard.html" title="Dashboard"
+            ><i class="fas fa-user"></i>
+            <span class="hide-sm">Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="login.html" title="Logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="hide-sm">Logout</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <section class="container">
+      <h1 class="large text-primary">
+        Dashboard
+      </h1>
+      <p class="lead"><i class="fas fa-user"></i> Welcome John Doe</p>
+      <div class="dash-buttons">
+        <a href="edit-profile.html" class="btn btn-light"
+          ><i class="fas fa-user-circle text-primary"></i> Edit Profile</a
+        >
+        <a href="edit-profile.html" class="btn btn-light"
+          ><i class="fas fa-user-circle text-primary"></i> Create a recipe</a
+        >
+      </div>
+
+      <div class="profile-grid my-1">
+         <!-- Top -->
+        <div class="profile-top bg-primary p-1">
+          <img
+            class="round-img my-1"
+            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+            alt=""
+          />
+          <h1 class="large">John Doe</h1>
+          <p class="lead">Developer at Microsoft</p>
+          <p>Seattle, WA</p>
+          <div class="icons my-1">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-globe fa-2x"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+             <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-youtube fa-2x"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+      <!-- My Recipes -->
+      <div class="profile-myrecipes bg-light p-2">
+      <h2 class="text-primary">My Recipes</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th class="hide-sm">Prep Time</th>
+            <th class="hide-sm">Cook Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Garlic Chicken</td>
+            <td class="hide-sm">15 min</td>
+            <td class="hide-sm">
+              20 min
+            </td>
+            <td>
+            	<button class="btn btn-success">
+                Add to list
+              </button>
+              <button class="btn btn-success">
+                Edit
+              </button>
+              <button class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Mapo Tofu</td>
+            <td class="hide-sm">10 min</td>
+            <td class="hide-sm">
+              15 min
+            </td>
+            <td>
+            	<button class="btn btn-success">
+                Add to list
+              </button>
+              <button class="btn btn-success">
+                Edit
+              </button>
+              <button class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <!-- Liked recipes -->
+      <div class="profile-likedrecipes bg-light p-2">
+      <h2 class="text-primary">Recipes I liked</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th class="hide-sm">Prep Time</th>
+            <th class="hide-sm">Cook Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Garlic Chicken</td>
+            <td class="hide-sm">15 min</td>
+            <td class="hide-sm">
+              20 min
+            </td>
+            <td>
+            	<button class="btn btn-success">
+                Add to list
+              </button>
+              <button class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Mapo Tofu</td>
+            <td class="hide-sm">10 min</td>
+            <td class="hide-sm">
+              15 min
+            </td>
+            <td>
+            	<button class="btn btn-success">
+                Add to list
+              </button>
+              <button class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+        <div class="my-2">
+            <button class="btn btn-danger">
+                <i class="fas fa-user-minus"></i>
+
+                Delete My Account
+            </button>
+          </div>
+    </section>
+
+  </body>
+</html>

@@ -32,7 +32,7 @@ router.get('/me', auth, async (req, res) => {
 // @access  Private
 router.post('/', auth, async (req, res) => {
   const {
-    sex,
+    gender,
     birthday,
     location,
     occupation,
@@ -47,7 +47,7 @@ router.post('/', auth, async (req, res) => {
   // Build profile object
   const profileFields = {};
   profileFields.user = req.user.id;
-  if (sex) profileFields.sex = sex;
+  if (gender) profileFields.gender = gender;
   if (birthday) profileFields.birthday = birthday;
   if (location) profileFields.location = location;
   if (occupation) profileFields.occupation = occupation;

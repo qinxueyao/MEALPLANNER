@@ -170,7 +170,37 @@ router.get('/', auth, async (req, res) => {
   try {
     const recipes = await Recipe.find()
       .sort({ date: -1 })
-      .populate('user', 'name');
+      .populate('user', 'username');
+    res.json(recipes);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route    GET api/recipes/me
+// @desc     Get all recipes of current user
+// @access   Private
+router.get('/me', auth, async (req, res) => {
+  try {
+    const recipes = await Recipe.find({ user: req.user.id })
+      .sort({ date: -1 })
+      .populate('user', 'username');
+    res.json(recipes);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route    GET api/recipes/user/:user_id
+// @desc     Get all recipes of this user
+// @access   Private
+router.get('/user/:user_id', auth, async (req, res) => {
+  try {
+    const recipes = await Recipe.find({ user: req.params.user_id })
+      .sort({ date: -1 })
+      .populate('user', 'username');
     res.json(recipes);
   } catch (err) {
     console.error(err.message);
@@ -185,7 +215,7 @@ router.get('/:id', auth, async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id).populate(
       'user',
-      'name'
+      'username'
     );
 
     if (!recipe) {
@@ -375,7 +405,7 @@ router.post(
 
       const newComment = {
         text: req.body.text,
-        name: user.name,
+        username: user.username,
         avatar: user.avatar,
         user: req.user.id
       };

@@ -9,7 +9,7 @@ const ListSchema = new mongoose.Schema({
     {
       recipe: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'recipes'
+        ref: 'recipe'
       },
       title: String,
       ingredients: [

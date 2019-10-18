@@ -3,7 +3,6 @@ const router = express.Router();
 const auth = require('../../middleware/auth');
 
 const User = require('../../models/User');
-const Profile = require('../../models/Profile');
 const Recipe = require('../../models/Recipe');
 const List = require('../../models/List');
 
@@ -57,7 +56,7 @@ router.get('/me', auth, async (req, res) => {
   try {
     const list = await List.findOne({ user: req.user.id }).populate(
       'user',
-      'name'
+      'username'
     );
     if (!list) {
       return res.status(400).json({ msg: 'There is no list for this user' });
